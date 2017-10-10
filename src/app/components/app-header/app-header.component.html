@@ -1,0 +1,30 @@
+<header class="app-header navbar">
+    <button class="navbar-toggler d-lg-none" type="button" appMobileSidebarToggler>&#9776;</button>
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler d-md-down-none" type="button" appSidebarMinimizer>&#9776;</button>
+    <ul class="nav navbar-nav d-md-down-none">
+        <li class="nav-item px-3">
+            <a class="nav-link" href="#">Tableau de bord</a>
+        </li>
+        <li class="nav-item px-3">
+            <a class="nav-link" href="#">Users</a>
+        </li>
+        <li class="nav-item px-3">
+            <a class="nav-link" href="#">Settings</a>
+        </li>
+    </ul>
+    <ul class="nav navbar-nav ml-auto">
+
+        <li class="nav-item dropdown" dropdown placement="bottom right">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" dropdownToggle (click)="false">
+                <img src="assets/img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com" />
+                <span class="d-md-down-none">{{loggedInDisplayName}}</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" *dropdownMenu aria-labelledby="simple-dropdown">
+                <a class="dropdown-item"><i class="fa fa-user "></i> Profil</a>
+                <a class="dropdown-item " (click)="logout() "><i class="fa fa-user "></i> Déconnexion</a>
+            </div>
+        </li>
+
+    </ul>
+</header>
